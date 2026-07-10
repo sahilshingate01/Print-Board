@@ -4,9 +4,9 @@
 
 ## 🎥 Demo
 
-<video src="printborad%20rec.mp4" width="100%" controls></video>
+<video src="demo.mp4" width="100%" controls></video>
 
-*(If the video does not load, you can view it by downloading `printborad rec.mp4` from the repository or dragging and dropping the file into a GitHub issue/PR to get a hosted link).*
+*(If the video does not load, you can view it by downloading `demo.mp4` from the repository or dragging and dropping the file into a GitHub issue/PR to get a hosted link).*
 
 ## ✨ Features
 
