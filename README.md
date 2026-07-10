@@ -4,7 +4,7 @@
 
 ## 🎥 Demo
 
-<video src="https://github.com/sahilshingate01/Print-Board/raw/main/demo.mp4" width="100%" controls></video>
+https://github.com/sahilshingate01/Print-Board/raw/main/demo.mp4
 
 *(If the video does not load, you can view it by downloading `demo.mp4` from the repository or dragging and dropping the file into a GitHub issue/PR to get a hosted link).*
 
