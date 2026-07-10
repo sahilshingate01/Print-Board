@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printboard</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-row">
+        <img src="../assets/icon_64.png" alt="Printboard" class="logo-icon">
+        <h1 class="logo-text">Printboard</h1>
+      </div>
+      <p class="tagline">Bulk Pinterest Image Downloader</p>
+    </header>
+
+    <!-- Keyword Input -->
+    <section class="input-section" id="inputSection">
+      <label for="keywords" class="input-label">
+        <span class="label-icon">🔑</span>
+        Paste Keywords <span class="label-hint">(one per line)</span>
+      </label>
+      <textarea 
+        id="keywords" 
+        class="keywords-input" 
+        placeholder="funny group pose ideas&#10;college group photo poses&#10;travel friends pose ideas"
+        rows="6"
+        spellcheck="false"
+      ></textarea>
+
+      <div class="settings-row">
+        <div class="setting" style="flex:1">
+          <label for="scrollDelay" class="setting-label">Scroll speed</label>
+          <select id="scrollDelay" class="setting-select">
+            <option value="fast">Fast</option>
+            <option value="normal" selected>Normal</option>
+            <option value="slow">Slow</option>
+          </select>
+        </div>
+        <div class="setting-info">
+          <span class="info-badge">♾️ Downloads all available images</span>
+        </div>
+      </div>
+
+      <button id="startBtn" class="start-btn">
+        <span class="btn-icon">🚀</span>
+        Start Downloading
+      </button>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section hidden" id="progressSection">
+      <div class="overall-progress">
+        <div class="progress-header">
+          <span class="progress-title">Overall Progress</span>
+          <span class="progress-count" id="overallCount">0 / 0 keywords</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="overallBar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="current-keyword-section">
+        <div class="current-header">
+          <span class="current-label">Current:</span>
+          <span class="current-keyword" id="currentKeyword">—</span>
+        </div>
+        <div class="current-status" id="currentStatus">Waiting...</div>
+        <div class="progress-bar-container small">
+          <div class="progress-bar accent" id="currentBar" style="width: 0%"></div>
+        </div>
+        <div class="image-count" id="imageCount"></div>
+      </div>
+
+      <!-- Log -->
+      <div class="log-section">
+        <div class="log-header">
+          <span>Activity Log</span>
+          <button class="log-clear" id="clearLog" title="Clear log">✕</button>
+        </div>
+        <div class="log-container" id="logContainer">
+          <div class="log-empty">Waiting to start...</div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button id="stopBtn" class="stop-btn">
+          <span class="btn-icon">⏹</span>
+          Stop
+        </button>
+        <button id="newBtn" class="new-btn hidden">
+          <span class="btn-icon">➕</span>
+          New Batch
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
